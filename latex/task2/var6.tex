@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage[12pt]{extsizes}
+\usepackage{fancyvrb}
+\usepackage{indentfirst}
+\usepackage[
+  left=2cm, right=2cm, top=2cm, bottom=2cm, headsep=0.2cm, footskip=0.6cm, bindingoffset=0cm
+]{geometry}
+\usepackage[english,russian]{babel}
+
+
+\begin{document}
+\section*{Вариант 6}
+
+Общая оценка последовательности $S$ строится как сумма оценок каждого
+входящего в неё вектора $X_i$:
+\begin{multline}
+O(A_0, F_j, S) = \sum_{i=1}^{\textit{длина}(S)} O(A_0, F_j, X_i) = \\
+\sum_{i=1}^{\textit{длина}(S)} (c_1 \cdot N_1(X_i, A_0, F_j) + c_2 \cdot N_2(X_i, A_0, F_j) + c_3 \cdot N_3(X_i, A_0, F_j))
+\end{multline}
+где: $X_i$~--- $i$-й набор последовательности $S$; $c_1$--$c_3$~--- нормализующие
+константы; $N_1$--$N_3$~--- параметры различающей активности.
+
+Функция различия для (1) переопределяется следующим образом:
+\begin{equation}
+R(g, X_i, A_0, F_j) =
+\begin{cases}
+0, & \text{если выходы элементов $g$ множества ЦУ,} \\
+   & \text{которые принадлежат классу $F_j$,} \\
+   & \text{одинаковы после подачи набора $X_i$;} \\
+1, & \text{иначе.}
+\end{cases}
+\end{equation}
+
+\end{document}
